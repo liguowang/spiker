@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+setup.py
+bin/spiker.py
+lib/spiker.egg-info/PKG-INFO
+lib/spiker.egg-info/SOURCES.txt
+lib/spiker.egg-info/dependency_links.txt
+lib/spiker.egg-info/not-zip-safe
+lib/spiker.egg-info/requires.txt
+lib/spiker.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+include MANIFEST.in
+include PKG-INFO
+include LICENSE.txt
+
+recursive-include hischiplib *
+recursive-include bin *
+recursive-include dat *
+recursive-include docs *
