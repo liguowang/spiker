@@ -12,14 +12,14 @@ import string
 import random
 import os
 from optparse import OptionParser
-import run_bowtie2,run_macs2,process_bam,PE,write_bw
+from spikers import run_bowtie2,run_macs2,process_bam,PE,write_bw
 
 
 __author__ = "Liguo Wang"
 __copyright__ = "Copyleft"
 __credits__ = []
 __license__ = "GPL"
-__version__="1.0.1"
+__version__="1.0.3"
 __maintainer__ = "Liguo Wang"
 __email__ = "wang.liguo@mayo.edu"
 __status__ = "Development"
