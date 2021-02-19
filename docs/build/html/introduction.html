@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to spike-in control &mdash; Spiker documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Prerequisites" href="installation.html" />
+    <link rel="prev" title="Spiker’s Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Spiker
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to spike-in control</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">1. Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#python-dependencies">2. Python Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#install-spiker">3. Install Spiker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#upgrade-spiker">4. Upgrade Spiker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">5. Release history</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Usage information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">1. Analysis workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#input-and-output">2. Input and output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#usage">3. Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Walkthrough example</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html">1. Prepare FASTQ files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#build-bowtie2-index-files">2. Build bowtie2 index files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#map-reads-to-the-composite-reference-genome">3. Map reads to the composite reference genome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#calculate-scaling-factors">4. Calculate scaling factors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#run-spiker">5. Run Spiker</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Bowtie2 Index Files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bowtie2_index.html">1. Bowtie2 index files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bowtie2_index.html#index-files-for-human-drosophila">2. Index files for Human + Drosophila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bowtie2_index.html#index-files-for-mouse-drosophila">3. Index files for Mouse + Drosophila</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Test Dataset</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">1. Test dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html#h3k79me2-chip-seq-data">2. H3K79me2 ChIP-seq data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html#wce-whole-cell-extract-data">3. WCE (whole cell extract) data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html#md5sum">4. MD5sum</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Liscense</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="liscense.html">LICENSE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Spiker</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Introduction to spike-in control</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-spike-in-control">
+<h1>Introduction to spike-in control<a class="headerlink" href="#introduction-to-spike-in-control" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/ChIP_sequencing">ChIP-sequencing (ChIP-Seq)</a>
+is widely used to map transcription factor binding sites (TFBS) and histone modifications (methylation, acetylation, phosphorylation, and ubiquitylation) status to the genome. One important step of ChIP-seq data analysis is <strong>peak calling</strong>, in which the ChIPed sample is compared to the control sample to find peak regions where “DNA fragments from ChIPed samples” are significantly enriched.</p>
+<p>Besides <strong>peak calling</strong>, ChIP-seq data can also be used for <strong>quantitative analyses</strong>, in which one group of ChIPed samples are compared to another group of ChIPed samples to identify
+differential TFBS, gained or lost histone modification sites, etc.</p>
+<p>Both <strong>peak calling</strong> and <strong>quantitative analysis</strong> assume the same number of cells would yield the same amount of DNAs (or chromatin) under different conditions. Sometimes, this assumption does not hold <a class="footnote-reference brackets" href="#id5" id="id1">1</a>. For example, when the histone methyltransferases (such as EZH2 for H3K27 <a class="footnote-reference brackets" href="#id7" id="id2">2</a>, SETD2 for H3K36 <a class="footnote-reference brackets" href="#id9" id="id3">3</a>, DOT1L for H3K79 <a class="footnote-reference brackets" href="#id11" id="id4">4</a>) are mutated or dysregulated. The per-cell DNA/chromatin yield will be significantly reduced. In these scenarios, conventional normalization and analytic methods will fail or compromise the power to identify peaks or detect epigenetic changes.</p>
+<p>To accurately quantify the ChIP-seq signals, we need to set up an “internal control”–a small amount of exogenous chromatin (called spike-in chromatin) added to all the samples before doing the ChIP experiment. Any biological manipulations or technical variations introduced during the ChIP-seq experiment will also occur with the spike-in chromatin. After sequencing, we can normalize the signals from the experimental samples to this “internal control”.</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Drosophila_melanogaster">Drosophila melanogaster</a> (fruit fly) genome is a good exogenous control for mammalian cells because 1) The Drosophila genome is well studied and has a high-quality sequence assembly. 2) The similarity between Drosophila and human (mouse) genomes is low, so that it’s easy to separate “human DNA sequences” from “Drosophila DNA sequences”. 3) Drosophila cells are readily available in large quantities. 4) The Drosophila cells have all of the key histone modification marks reported in humans.</p>
+<p><strong>References</strong></p>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Chen K, Hu Z, Xia Z, Zhao D, Li W, Tyler JK. The Overlooked Fact: Fundamental Need for Spike-In Control for Virtually All Genome-Wide Analyses. Mol Cell Biol. 2015 Dec 28;36(5):662-7. doi: 10.1128/MCB.00970-14. PMID: <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/26711261/">26711261</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Cao R, Wang L, Wang H, Xia L, Erdjument-Bromage H, Tempst P, Jones RS, Zhang Y. Role of histone H3 lysine 27 methylation in Polycomb-group silencing. Science. 2002 Nov 1;298(5595):1039-43. doi: 10.1126/science.1076997. Epub 2002 Sep 26. PMID: <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/12351676/">12351676</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Pfister SX, Ahrabi S, Zalmas LP, Sarkar S, Aymard F, Bachrati CZ, Helleday T, Legube G, La Thangue NB, Porter AC, Humphrey TC. SETD2-dependent histone H3K36 trimethylation is required for homologous recombination repair and genome stability. Cell Rep. 2014 Jun 26;7(6):2006-18. doi: 10.1016/j.celrep.2014.05.026. Epub 2014 Jun 12. PMID: <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/24931610">24931610</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Orlando DA, Chen MW, Brown VE, Solanki S, Choi YJ, Olson ER, Fritz CC, Bradner JE, Guenther MG. Quantitative ChIP-Seq normalization reveals global modulation of the epigenome. Cell Rep. 2014 Nov 6;9(3):1163-70. doi: 10.1016/j.celrep.2014.10.018. Epub 2014 Oct 30. PMID: <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/25437568/">25437568</a>.</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="1. Prerequisites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Spiker’s Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Liguo Wang
+      <span class="lastupdated">
+        Last updated on Feb 12, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

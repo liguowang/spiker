@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Test dataset &mdash; Spiker documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="LICENSE" href="liscense.html" />
+    <link rel="prev" title="1. Bowtie2 index files" href="bowtie2_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Spiker
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">1. Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#python-dependencies">2. Python Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#install-spiker">3. Install Spiker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#upgrade-spiker">4. Upgrade Spiker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">5. Release history</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Walkthrough example</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html">1. Prepare FASTQ files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#build-bowtie2-index-files">2. Build bowtie2 index files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#map-reads-to-the-composite-reference-genome">3. Map reads to the composite reference genome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#calculate-scaling-factors">4. Calculate scaling factors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html#run-spiker">5. Run Spiker</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Bowtie2 Index Files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bowtie2_index.html">1. Bowtie2 index files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bowtie2_index.html#index-files-for-human-drosophila">2. Index files for Human + Drosophila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bowtie2_index.html#index-files-for-mouse-drosophila">3. Index files for Mouse + Drosophila</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Test Dataset</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Test dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#h3k79me2-chip-seq-data">2. H3K79me2 ChIP-seq data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#wce-whole-cell-extract-data">3. WCE (whole cell extract) data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#md5sum">4. MD5sum</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Liscense</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="liscense.html">LICENSE</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Spiker</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Test dataset</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/dataset.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-dataset">
+<span id="dataset"></span><h1><span class="section-number">1. </span>Test dataset<a class="headerlink" href="#test-dataset" title="Permalink to this headline">¶</a></h1>
+<p>We used the H3K79me2 ChIP-seq data published by <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/25437568/">Orlando et al</a> as the testing dataset. In this study, human Jurkat cells were treated with either DMSO or EPZ (Dot1L inhibitor), then collected individually and mixed according to the following compositions by cell number.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>100% DMSO to 0% EPZ</p></li>
+<li><p>75% DMSO to 25% EPZ.</p></li>
+<li><p>50% DMSO to 50% EPZ.</p></li>
+<li><p>25% DMSO to 75% EPZ.</p></li>
+<li><p>0% DMSO to 100% EPZ.</p></li>
+</ol>
+</div></blockquote>
+<p>They tested whether traditional ChIP-seq analysis methods would reveal the decrease in human per-cell H3K79me2 occupancy and, if not, whether the addition of the exogenuous Drosophila chromatin would allow detection of H3K79me2 removal. All data has been deposited into GEO with accession <a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60104">GSE60104</a>.</p>
+</div>
+<div class="section" id="h3k79me2-chip-seq-data">
+<h1><span class="section-number">2. </span>H3K79me2 ChIP-seq data<a class="headerlink" href="#h3k79me2-chip-seq-data" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 16%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Sample</p></td>
+<td><p>SRR_accession</p></td>
+<td><p>BAM (hg38 only)</p></td>
+<td><p>bigWig files</p></td>
+<td><p>BAM (hg38 + dm6)</p></td>
+</tr>
+<tr class="row-even"><td><p>Jurkat_K79_0%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1536557">SRR1536557</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/600F3474-7E67-4673-B998-DBE963FBD76D/`Jurkat_K79_00p_Rep1_SRR1536557_human.sorted.bam">bam</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/940C4990-D88D-446E-A7EA-7626045D1237/`K79_00p_R1.treat.hg38.SpikeIn_scaled.bigWig">bigWig</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/A9C49FED-220C-4996-927A-1C4F160F5C30/Jurkat_K79_00p_Rep1_SRR1536557.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Jurkat_K79_25%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1536558">SRR1536558</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/B1211D05-229A-4C3B-8A9F-3B5818CF3F58/`Jurkat_K79_25p_Rep1_SRR1536558_human.sorted.bam">bam</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/DCB02791-A9A4-4789-AF59-B2F651C14A27/`K79_25p_R1.treat.hg38.SpikeIn_scaled.bigWig">bigWig</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/141AFB03-67BE-416B-B00D-3B8C1553F521/Jurkat_K79_25p_Rep1_SRR1536558.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Jurkat_K79_50%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1536559">SRR1536559</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/77B7D500-8ECD-487D-8A10-F04F58CDA788/`Jurkat_K79_50p_Rep1_SRR1536559_human.sorted.bam">bam</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/B2545A6C-5ED3-4C6E-AB9D-925374DD8DCC/`K79_50p_R1.treat.hg38.SpikeIn_scaled.bigWig">bigWig</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/3041045F-7FD5-4FFA-A1BB-ED71DAE77D38/Jurkat_K79_50p_Rep1_SRR1536559.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Jurkat_K79_75%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1536560">SRR1536560</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/38734B6A-09B1-41E5-98CD-11B3CEE87442/`Jurkat_K79_75p_Rep1_SRR1536560_human.sorted.bam">bam</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/FE2A56A4-0BF1-4130-B6C9-6C9A08150499/`K79_75p_R1.treat.hg38.SpikeIn_scaled.bigWig">bigWig</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/42CC6AF3-E6FE-4CD1-823F-653E1ABBFF0C/Jurkat_K79_75p_Rep1_SRR1536560.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Jurkat_K79_100%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1536561">SRR1536561</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/270059B9-93C3-4D70-82CA-CDE4F30FE245/`Jurkat_K79_100p_Rep1_SRR1536561_human.sorted.bam">bam</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/315F8E60-D1BE-4E2F-A678-971A4F1620E9/`K79_100p_R1.treat.hg38.SpikeIn_scaled.bigWig">bigWig</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/AAEE8B55-D5E6-47C6-9DCE-4B33AF944835/Jurkat_K79_100p_Rep1_SRR1536561.sorted.bam">bam</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="wce-whole-cell-extract-data">
+<h1><span class="section-number">3. </span>WCE (whole cell extract) data<a class="headerlink" href="#wce-whole-cell-extract-data" title="Permalink to this headline">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 34%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Sample</p></td>
+<td><p>SRR_accession</p></td>
+<td><p>BAM (hg38 only)</p></td>
+</tr>
+<tr class="row-even"><td><p>Jurkat_WCE_0%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1584489">SRR1584489</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/757F5C35-4644-46A5-9CCD-8835F5EF16FC/Jurkat_WCE_00p_Rep1.SRR1584489_human.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Jurkat_WCE_25%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1584490">SRR1584490</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/F4835E45-F70E-4D41-97BC-96B3323F575D/Jurkat_WCE_25p_Rep1.SRR1584490_human.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Jurkat_WCE_50%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1584491">SRR1584491</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/DD765972-2588-4E06-B3A8-1701D8310263/Jurkat_WCE_50p_Rep1.SRR1584491_human.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Jurkat_WCE_75%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1584492">SRR1584492</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/C99A0893-CE57-4CDB-8A3D-57C9709FC9A2/Jurkat_WCE_75p_Rep1.SRR1584492_human.sorted.bam">bam</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Jurkat_WCE_100%_R1</p></td>
+<td><p><a class="reference external" href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1584493">SRR1584493</a></p></td>
+<td><p><a class="reference external" href="https://de.cyverse.org/dl/d/BFF0E876-7797-4961-B310-F0AB8DB6356E/Jurkat_WCE_100p_Rep1.SRR1584493_human.sorted.bam">bam</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="md5sum">
+<h1><span class="section-number">4. </span>MD5sum<a class="headerlink" href="#md5sum" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># K79 BAM files with reads only mapped to the human reference genome (GRCh38/hg38)</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_00p_Rep1_SRR1536557_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="n">a4b8ac56f6ce4e1f9c0da2279ec3ea36</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_25p_Rep1_SRR1536558_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">56</span><span class="n">be607cb3ab886aa2fb033b4a8d37ab</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_50p_Rep1_SRR1536559_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">653170</span><span class="n">d551ce395e40b044cfa36fbaef</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_75p_Rep1_SRR1536560_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mf">23495e1422</span><span class="n">d9546ba496e69e2becd6f7</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_100p_Rep1_SRR1536561_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2</span><span class="n">ebc83a02982a2be8deaca7b84651e44</span>
+
+<span class="c1"># K79 bigWig files generated by Spiker</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">K79_00p_R1</span><span class="o">.</span><span class="n">treat</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">SpikeIn_scaled</span><span class="o">.</span><span class="n">bigWig</span><span class="p">)</span> <span class="o">=</span> <span class="n">f13d2c6e228c87cf1d8262352f7e983c</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">K79_25p_R1</span><span class="o">.</span><span class="n">treat</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">SpikeIn_scaled</span><span class="o">.</span><span class="n">bigWig</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0789024</span><span class="n">f52c35a3888254239dad6766a</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">K79_50p_R1</span><span class="o">.</span><span class="n">treat</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">SpikeIn_scaled</span><span class="o">.</span><span class="n">bigWig</span><span class="p">)</span> <span class="o">=</span> <span class="mi">83321</span><span class="n">afec8522f21c20baee3e772d85c</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">K79_75p_R1</span><span class="o">.</span><span class="n">treat</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">SpikeIn_scaled</span><span class="o">.</span><span class="n">bigWig</span><span class="p">)</span> <span class="o">=</span> <span class="n">bb64aafd851acb581742b581fa06cc5b</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">K79_100p_R1</span><span class="o">.</span><span class="n">treat</span><span class="o">.</span><span class="n">hg38</span><span class="o">.</span><span class="n">SpikeIn_scaled</span><span class="o">.</span><span class="n">bigWig</span><span class="p">)</span> <span class="o">=</span> <span class="n">aa2a38350a0dc07978b76297ea913dc3</span>
+
+<span class="c1"># K79 BAM files with reads mapped to the composite genome (hg38 + dm6)</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_00p_Rep1_SRR1536557</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">729</span><span class="n">b5391769c763eb1c85e5b2ee66af9</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_25p_Rep1_SRR1536558</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="n">faffab3d3f9161304826c7f5bf84ee9e</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_50p_Rep1_SRR1536559</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="n">c72e603c844fa8a38ca9fe8c2496a89</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_75p_Rep1_SRR1536560</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">9</span><span class="n">cac7b03ec65804ad3cb25143480348a</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_K79_100p_Rep1_SRR1536561</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">05107197</span><span class="n">f676e8b898bee99ed001a61a</span>
+
+<span class="c1"># WCE BAM files with reads only mapped to the human reference genome (GRCh38/hg38)</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_WCE_00p_Rep1</span><span class="o">.</span><span class="n">SRR1584489_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mf">561430e24</span><span class="n">b5edab177bfc4e832c5d8c0</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_WCE_100p_Rep1</span><span class="o">.</span><span class="n">SRR1584493_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">8</span><span class="n">a8546927383afeda6c0e20f82807024</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_WCE_25p_Rep1</span><span class="o">.</span><span class="n">SRR1584490_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">4396</span><span class="n">f3a31c718029d620dd770825df1e</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_WCE_50p_Rep1</span><span class="o">.</span><span class="n">SRR1584491_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">96</span><span class="n">c5ae3cd9ad129167d2143fcb66606b</span>
+<span class="n">MD5</span> <span class="p">(</span><span class="n">Jurkat_WCE_75p_Rep1</span><span class="o">.</span><span class="n">SRR1584492_human</span><span class="o">.</span><span class="n">sorted</span><span class="o">.</span><span class="n">bam</span><span class="p">)</span> <span class="o">=</span> <span class="mi">09</span><span class="n">b7ec2ecec4ccb7cce8392f88a17125</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="liscense.html" class="btn btn-neutral float-right" title="LICENSE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bowtie2_index.html" class="btn btn-neutral float-left" title="1. Bowtie2 index files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Liguo Wang
+      <span class="lastupdated">
+        Last updated on Feb 12, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
