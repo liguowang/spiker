@@ -37,8 +37,8 @@ Input **BAM** files
  * `bigWig <https://genome.ucsc.edu/goldenpath/help/bigWig.html>`_
  * `bedGraph <https://genome.ucsc.edu/goldenPath/help/bedgraph.html>`_
 
-Usage
------
+Command options
+---------------
 
 Options:
   --version             show program's version number and exit
