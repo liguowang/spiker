@@ -12,7 +12,7 @@ import string
 import random
 import os
 from optparse import OptionParser
-from hischiplib import run_bowtie2,run_macs2,process_bam,PE,write_bw
+import run_bowtie2,run_macs2,process_bam,PE,write_bw
 
 
 __author__ = "Liguo Wang"
