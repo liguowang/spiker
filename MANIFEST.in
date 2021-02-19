@@ -1,8 +1,8 @@
 include MANIFEST.in
 include PKG-INFO
 include LICENSE.txt
+include readme.rst
 
 recursive-include lib *
 recursive-include bin *
-recursive-include dat *
 recursive-include docs *
