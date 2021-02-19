@@ -8,7 +8,7 @@ Setup script for spiker  -- Analysis workflow for Spike-in ChIP-seq data
 
 def main():
 	setup(  name = "spiker",
-			version = "1.0.1",
+			version = "1.0.2",
 			py_modules = [ 'psyco_full' ],
 			python_requires='>=3.5',
 			packages = find_packages( 'lib' ),

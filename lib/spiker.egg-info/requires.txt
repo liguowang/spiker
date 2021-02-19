@@ -1,0 +1,6 @@
+numpy
+scipy
+pysam
+deeptools
+macs2
+pyBigWig
