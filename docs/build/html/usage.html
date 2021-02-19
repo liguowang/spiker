@@ -106,7 +106,8 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Analysis workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#input-and-output">2. Input and output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#command-options">3. Command options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#spiker-py-options">3. Spiker.py options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#split-bam-py-options">4. split_bam.py options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Walkthrough example</span></p>
 <ul>
@@ -234,8 +235,8 @@ $ spiker.py --broad -t H3K27ac.sorted.bam -c control.sorted.bam --spikeIn --csf 
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="command-options">
-<h1><span class="section-number">3. </span>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="spiker-py-options">
+<h1><span class="section-number">3. </span>Spiker.py options<a class="headerlink" href="#spiker-py-options" title="Permalink to this headline">¶</a></h1>
 <dl>
 <dt>Options:</dt><dd><dl class="option-list">
 <dt><kbd><span class="option">--version</span></kbd></dt>
@@ -351,6 +352,41 @@ will be much faster.</p>
 </dd>
 <dt><kbd><span class="option">--verbose</span></kbd></dt>
 <dd><p>If set, print detailed information for debugging.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="split-bam-py-options">
+<h1><span class="section-number">4. </span>split_bam.py options<a class="headerlink" href="#split-bam-py-options" title="Permalink to this headline">¶</a></h1>
+<dl>
+<dt>Options:</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">--version</span></kbd></dt>
+<dd><p>show program’s version number and exit</p>
+</dd>
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>show this help message and exit</p>
+</dd>
+<dt><kbd><span class="option">-i <var>BAM_FILE</var></span></kbd></dt>
+<dd><p>BAM file of the composite genome (such as human + fly)</p>
+</dd>
+<dt><kbd><span class="option">-o <var>OUT_PREFIX</var></span>, <span class="option">--output=<var>OUT_PREFIX</var></span></kbd></dt>
+<dd><p>Output prefix. The original BAM file will be split
+into four BAM files: ‘prefix_human.bam’,
+‘prefix_exogenous.bam’, ‘prefix_both.bam’,
+‘prefix_neither.bam’.</p>
+</dd>
+<dt><kbd><span class="option">-p <var>CHR_PREFIX</var></span>, <span class="option">--exo-prefix=<var>CHR_PREFIX</var></span></kbd></dt>
+<dd><p>Prefix added to the exogenous chromosome IDs. For
+example. ‘chr2L’ -&gt; ‘dm6_chr2L’. default=dm6_</p>
+</dd>
+<dt><kbd><span class="option">-q <var>MAP_QUAL</var></span>, <span class="option">--mapq=<var>MAP_QUAL</var></span></kbd></dt>
+<dd><p>Mapping quality (phred scaled) threshold. Alignments
+with mapping quality score lower than this will be
+assigned to ‘prefix_neither.bam’. default=30</p>
+</dd>
+<dt><kbd><span class="option">--threads=<var>N_THREAD</var></span></kbd></dt>
+<dd><p>Number of threads to use for BAM sorting. default=1</p>
 </dd>
 </dl>
 </dd>

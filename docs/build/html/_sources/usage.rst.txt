@@ -38,8 +38,8 @@ Input **BAM** files
  * `bigWig <https://genome.ucsc.edu/goldenpath/help/bigWig.html>`_
  * `bedGraph <https://genome.ucsc.edu/goldenPath/help/bedgraph.html>`_
 
-Command options
----------------
+Spiker.py options
+------------------
 
 Options:
   --version             show program's version number and exit
@@ -110,5 +110,25 @@ Options:
                         will be much faster.
   --refine              If set, detect peak summit position.
   --verbose             If set, print detailed information for debugging.
+
+split_bam.py options
+--------------------
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -i BAM_FILE           BAM file of the composite genome (such as human + fly)
+  -o OUT_PREFIX, --output=OUT_PREFIX
+                        Output prefix. The original BAM file will be split
+                        into four BAM files: 'prefix_human.bam',
+                        'prefix_exogenous.bam', 'prefix_both.bam',
+                        'prefix_neither.bam'.
+  -p CHR_PREFIX, --exo-prefix=CHR_PREFIX
+                        Prefix added to the exogenous chromosome IDs. For
+                        example. 'chr2L' -> 'dm6_chr2L'. default=dm6_
+  -q MAP_QUAL, --mapq=MAP_QUAL
+                        Mapping quality (phred scaled) threshold. Alignments
+                        with mapping quality score lower than this will be
+                        assigned to 'prefix_neither.bam'. default=30
+  --threads=N_THREAD    Number of threads to use for BAM sorting. default=1  
 
 
