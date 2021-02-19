@@ -31,7 +31,8 @@ Use pip3 to install spiker from `PyPI <https://pypi.org/project/spiker/>`_ or `g
 
 Uninstall 
 ----------
- 
+::
+
  $ pip3 uninstall spiker
 
 Upgrade Spiker
