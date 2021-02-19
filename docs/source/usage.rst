@@ -27,6 +27,7 @@ Input **paired-end** fastq files
 
 Input **BAM** files
 ::
+
  $ spiker.py -t H3K27ac.sorted.bam -c control.sorted.bam --spikeIn --csf 1.23 --tsf 0.95 -o H3K27ac
  $ spiker.py --broad -t H3K27ac.sorted.bam -c control.sorted.bam --spikeIn --csf 1.23 --tsf 0.95 -o H3K27ac
 

@@ -99,14 +99,14 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">1. Prerequisites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html#python-dependencies">2. Python Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html#install-spiker">3. Install Spiker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html#upgrade-spiker">4. Upgrade Spiker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="change_log.html">5. Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#uninstall">4. Uninstall</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#upgrade-spiker">5. Upgrade Spiker</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Usage information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">1. Analysis workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html#input-and-output">2. Input and output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html#usage">3. Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html#command-options">3. Command options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Walkthrough example</span></p>
 <ul>
@@ -128,6 +128,10 @@
 <li class="toctree-l1"><a class="reference internal" href="dataset.html#h3k79me2-chip-seq-data">2. H3K79me2 ChIP-seq data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html#wce-whole-cell-extract-data">3. WCE (whole cell extract) data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset.html#md5sum">4. MD5sum</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Release history</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">1. Release history</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Liscense</span></p>
 <ul>
@@ -203,7 +207,7 @@
 is widely used to map transcription factor binding sites (TFBS) and histone modifications (methylation, acetylation, phosphorylation, and ubiquitylation) status to the genome. One important step of ChIP-seq data analysis is <strong>peak calling</strong>, in which the ChIPed sample is compared to the control sample to find peak regions where “DNA fragments from ChIPed samples” are significantly enriched.</p>
 <p>Besides <strong>peak calling</strong>, ChIP-seq data can also be used for <strong>quantitative analyses</strong>, in which one group of ChIPed samples are compared to another group of ChIPed samples to identify
 differential TFBS, gained or lost histone modification sites, etc.</p>
-<p>Both <strong>peak calling</strong> and <strong>quantitative analysis</strong> assume the same number of cells would yield the same amount of DNAs (or chromatin) under different conditions. Sometimes, this assumption does not hold <a class="footnote-reference brackets" href="#id5" id="id1">1</a>. For example, when the histone methyltransferases (such as EZH2 for H3K27 <a class="footnote-reference brackets" href="#id7" id="id2">2</a>, SETD2 for H3K36 <a class="footnote-reference brackets" href="#id9" id="id3">3</a>, DOT1L for H3K79 <a class="footnote-reference brackets" href="#id11" id="id4">4</a>) are mutated or dysregulated. The per-cell DNA/chromatin yield will be significantly reduced. In these scenarios, conventional normalization and analytic methods will fail or compromise the power to identify peaks or detect epigenetic changes.</p>
+<p>Both <strong>peak calling</strong> and <strong>quantitative analysis</strong> assume the same number of cells would yield the same amount of DNAs (or chromatin) under different conditions. Sometimes, this assumption does not hold <a class="footnote-reference brackets" href="#id5" id="id1">1</a>. For example, when the histone methyltransferases (such as EZH2 for H3K27 <a class="footnote-reference brackets" href="#id7" id="id2">2</a>, SETD2 for H3K36 <a class="footnote-reference brackets" href="#id9" id="id3">3</a>, DOT1L for H3K79 <a class="footnote-reference brackets" href="#id11" id="id4">4</a>) are mutated or dysregulated. The per-cell DNA/chromatin yield in ChIP experiments will be significantly reduced. In these scenarios, conventional normalization and analytic methods will fail or compromise the power to identify peaks or detect epigenetic changes.</p>
 <p>To accurately quantify the ChIP-seq signals, we need to set up an “internal control”–a small amount of exogenous chromatin (called spike-in chromatin) added to all the samples before doing the ChIP experiment. Any biological manipulations or technical variations introduced during the ChIP-seq experiment will also occur with the spike-in chromatin. After sequencing, we can normalize the signals from the experimental samples to this “internal control”.</p>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Drosophila_melanogaster">Drosophila melanogaster</a> (fruit fly) genome is a good exogenous control for mammalian cells because 1) The Drosophila genome is well studied and has a high-quality sequence assembly. 2) The similarity between Drosophila and human (mouse) genomes is low, so that it’s easy to separate “human DNA sequences” from “Drosophila DNA sequences”. 3) Drosophila cells are readily available in large quantities. 4) The Drosophila cells have all of the key histone modification marks reported in humans.</p>
 <p><strong>References</strong></p>

@@ -11,7 +11,7 @@ We used the H3K79me2 ChIP-seq data published by `Orlando et al <https://pubmed.n
    #. 25% DMSO to 75% EPZ.
    #. 0% DMSO to 100% EPZ.
 
-They tested whether traditional ChIP-seq analysis methods would reveal the decrease in human per-cell H3K79me2 occupancy and, if not, whether the addition of the exogenuous Drosophila chromatin would allow detection of H3K79me2 removal. All data has been deposited into GEO with accession `GSE60104 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60104>`_.
+They tested whether traditional ChIP-seq analysis methods would reveal the decrease in human per-cell H3K79me2 occupancy and, if not, whether the addition of the exogenous Drosophila chromatin would allow detection of H3K79me2 removal. All data has been deposited into GEO with accession `GSE60104 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60104>`_.
 
 
 H3K79me2 ChIP-seq data

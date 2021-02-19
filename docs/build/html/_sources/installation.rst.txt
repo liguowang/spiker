@@ -22,16 +22,21 @@ Python Dependencies
    These packages will be installed automatically if you use `pip3 <https://pip.pypa.io/en/stable/installing/>`_.
 
 Install Spiker
-------------------------------------------------------------------------------------------------------------------------------------
+---------------
 Use pip3 to install spiker from `PyPI <https://pypi.org/project/spiker/>`_ or `github <https://github.com/liguowang/spiker>`_. ::
 
  $ pip3 install spiker
  or 
  $ pip3 install git+https://github.com/liguowang/spiker.git
 
+Uninstall 
+----------
+::
+
+ $ pip3 uninstall spiker
 
 Upgrade Spiker
------------------
+---------------
 ::
 
  $ pip3 install spiker --upgrade	
