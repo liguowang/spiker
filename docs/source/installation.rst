@@ -29,14 +29,16 @@ Use pip3 to install spiker from `PyPI <https://pypi.org/project/spiker/>`_ or `g
  or 
  $ pip3 install git+https://github.com/liguowang/spiker.git
 
+Upgrade Spiker
+---------------
+::
+
+ $ pip3 install spiker --upgrade	
+ 
 Uninstall 
 ----------
 ::
 
  $ pip3 uninstall spiker
 
-Upgrade Spiker
----------------
-::
 
- $ pip3 install spiker --upgrade	
