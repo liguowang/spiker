@@ -19,7 +19,7 @@ __author__ = "Liguo Wang"
 __copyright__ = "Copyleft"
 __credits__ = []
 __license__ = "GPL"
-__version__="1.0.3"
+__version__="1.0.4"
 __maintainer__ = "Liguo Wang"
 __email__ = "wang.liguo@mayo.edu"
 __status__ = "Development"
@@ -466,7 +466,7 @@ def main():
 	# Calculate FRiP score
 	#=========================================================================
 	if options.frip:
-		from hischiplib import cal_FRiP
+		from spikers import cal_FRiP
 		if options.broad_peak:
 			logging.info("Step_10: Calculate FRiP score using '%s' and '%s'" % (broad_peak, chip_bam_sorted))
 			frip_score = cal_FRiP.frip_score(peak_file = broad_peak, bam_file = chip_bam_sorted, nthreads = options.n_threads)
