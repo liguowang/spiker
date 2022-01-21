@@ -1,3 +1,4 @@
 Reference
-===========
-Wei T, Nie J, Larson NB, Ye Z, Eckel Passow JE, Robertson KD, Kocher JA, Wang L. CpGtools: A Python Package for DNA Methylation Analysis. Bioinformatics. 2019 Dec 6 Epub 2019 Dec 06
+==========
+
+Wu D, Wang L, Huang H. Protocol to apply spike-in ChIP-seq to capture massive histone acetylation in human cells. STAR Protoc. 2021 Jul 17;2(3):100681. doi: 10.1016/j.xpro.2021.100681. PMID: 34337446; PMCID: `PMC8313745 <https://pubmed.ncbi.nlm.nih.gov/34337446/>`_.
