@@ -53,7 +53,7 @@ def create_headers(bamfile, ex_chr='',  prog_name='spiker', prog_ver = __version
 			for i in lst:
 				if i['SN'].startswith('chr'):
 					hs_header['SQ'].append(i)
-				elif i['SN'].startswith('ex_chr'):
+				elif i['SN'].startswith(ex_chr):
 					ex_header['SQ'].append(i)
 				else:
 					continue
