@@ -24,7 +24,7 @@ __email__ = "wang.liguo@mayo.edu"
 __status__ = "Development"
 
 
-def create_headers(bamfile, prog_name='spiker', prog_ver = __version__, co=[]):
+def create_headers(bamfile, ex_chr='',  prog_name='spiker', prog_ver = __version__, co=[]):
 	"""
 	Create BAM headers for human and exogenous BAM files. Note, to distinguish
 	the chromosomes of human and exogenous species, the chrom ID of
@@ -53,8 +53,10 @@ def create_headers(bamfile, prog_name='spiker', prog_ver = __version__, co=[]):
 			for i in lst:
 				if i['SN'].startswith('chr'):
 					hs_header['SQ'].append(i)
-				else:
+				elif i['SN'].startswith('ex_chr'):
 					ex_header['SQ'].append(i)
+				else:
+					continue
 		else:
 			if key not in hs_header:
 				hs_header[key] = bam_header[key]
@@ -128,7 +130,7 @@ def divided_bam(bam_file, outfile, q_cut=30, chr_prefix='dm6_', threads = 1):
 	fly_reads = 0
 	human_reads = 0
 	samfile = pysam.AlignmentFile(bam_file,'rb')
-	human_header, ex_header = create_headers(samfile)
+	human_header, ex_header = create_headers(samfile, ex_chr = chr_prefix)
 	OUT = open(outfile + '.report.txt','w')
 	HU = pysam.AlignmentFile(outfile + '_human.bam', "wb", header=human_header)
 	EX = pysam.AlignmentFile(outfile + '_exogenous.bam', "wb", header=ex_header)
