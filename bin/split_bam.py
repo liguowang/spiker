@@ -168,28 +168,50 @@ def divided_bam(bam_file, outfile, q_cut=30, chr_prefix='dm6_', threads = 1):
 					read2_chr = samfile.get_reference_name(aligned_read.next_reference_id)
 
 					if read1_chr.startswith(chr_prefix):
+						# both reads maped to fly
 						if read2_chr.startswith(chr_prefix):
-							aligned_read.reference_id = lookup_refid(ex_header, read1_chr)
+							if aligned_read.is_read1:
+								aligned_read.reference_id = lookup_refid(ex_header, read1_chr)
+							else:
+								aligned_read.reference_id = lookup_refid(ex_header, read2_chr)
 							EX.write(aligned_read)
 							fly_reads += 1
+						
+						# read-1 mapped to fly, read-2 mapped to human
 						else:
+							if aligned_read.is_read1:
+								aligned_read.reference_id = lookup_refid(ex_header, read1_chr)
+							else:
+								aligned_read.reference_id = lookup_refid(human_header, read2_chr)							
 							BO.write(aligned_read)
 							diff_genome += 1
 					else:
+						# read-1 mapped to human, read-2 mapped to fly
 						if read2_chr.startswith(chr_prefix):
-							#aliged_read.reference_id = lookup_refid(ex_header, read2_chr)
+							if aligned_read.is_read1:
+								aligned_read.reference_id = lookup_refid(human_header, read1_chr)
+							else:
+								aligned_read.reference_id = lookup_refid(ex_header, read2_chr)	
 							BO.write(aligned_read)
 							diff_genome += 1
+						
+						# both reads maped to human
 						else:
-							aligned_read.reference_id = lookup_refid(human_header, read1_chr)
+							if aligned_read.is_read1:
+								aligned_read.reference_id = lookup_refid(human_header, read1_chr)
+							else:
+								aligned_read.reference_id = lookup_refid(human_header, read2_chr)							
 							HU.write(aligned_read)
 							human_reads += 1
 				else:
+					# single-end reads
 					read_chr = samfile.get_reference_name(aligned_read.reference_id)
+					# reads maped to fly genome
 					if read_chr.startswith(chr_prefix):
 						aligned_read.reference_id = lookup_refid(ex_header, read_chr)
 						EX.write(aligned_read)
 						fly_reads += 1
+					# reads maped to human genome
 					else:
 						aligned_read.reference_id = lookup_refid(human_header, read_chr)
 						HU.write(aligned_read)
