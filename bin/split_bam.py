@@ -17,7 +17,7 @@ import subprocess
 __author__ = "Liguo Wang"
 __copyright__ = "Copyleft"
 __credits__ = []
-__license__ = "GPL"
+__license__ = "MIT"
 __version__="1.0.5"
 __maintainer__ = "Liguo Wang"
 __email__ = "wang.liguo@mayo.edu"
