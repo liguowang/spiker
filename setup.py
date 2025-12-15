@@ -1,6 +1,6 @@
 import sys, os, platform, glob
-from distutils.core import setup
 from setuptools import *
+from distutils.core import setup
 
 """
 Setup script for spiker  -- Analysis workflow for Spike-in ChIP-seq data
@@ -8,7 +8,7 @@ Setup script for spiker  -- Analysis workflow for Spike-in ChIP-seq data
 
 def main():
 	setup(  name = "spiker",
-			version = "1.0.3",
+			version = "1.0.5",
 			py_modules = [ 'psyco_full' ],
 			python_requires='>=3.5',
 			packages = find_packages( 'lib' ),
@@ -22,7 +22,7 @@ def main():
 			author_email ="wangliguo78@gmail.com",
 			platforms = ['Linux','MacOS'],
 			requires = ['cython (>=0.17)'],
-			install_requires = ['numpy','scipy', 'pysam', 'deeptools', 'macs2','pyBigWig'], 
+			install_requires = ['numpy','scipy', 'pysam', 'deeptools','pyBigWig'], 
 			description = "spiker (Analysis workflow for ChIP-seq data with spike-in)",
 			long_description = "Spiker is a tool to ananzlye data generated from ChIP-seq experiments with exogenous spike-in chromatin as internal control",
 			license='MIT License',
